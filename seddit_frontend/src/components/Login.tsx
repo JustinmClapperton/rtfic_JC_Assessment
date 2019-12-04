@@ -16,6 +16,7 @@ class Login extends React.Component<ILoginProps, ILoginState>{
     }
 
     private handleUsernameChange = (event: any) => {
+        event.preventDefault();
         if (event.target.name === "username") {
             this.setState({
                 username: event.target.value
@@ -23,7 +24,8 @@ class Login extends React.Component<ILoginProps, ILoginState>{
         }
     }
 
-    private handleSubmit = () => {
+    private handleSubmit = (event: any) => {
+        event.preventDefault();
         this.props.handleLogin(this.state.username)
     }
 
@@ -38,11 +40,9 @@ class Login extends React.Component<ILoginProps, ILoginState>{
                     </label>
                     <input type="submit" value="Login" />
                 </form>
-
             </div>
         );
     }
-
 }
 
 export {

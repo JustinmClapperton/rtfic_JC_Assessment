@@ -1,7 +1,7 @@
 import React from "react";
 import { Login } from "./Login";
 import { Home } from "./Home";
-import {IUser} from "../models/User";
+import { IUser } from "../models/User";
 
 interface IMainContainerProps {
 
@@ -26,7 +26,6 @@ class MainContainer extends React.Component<IMainContainerProps, IMainContainerS
             user: { username: username }
         })
     }
-
 
     render() {
         if (this.state.isLoggedIn && this.state.user) {
