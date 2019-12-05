@@ -5,7 +5,6 @@ import { CreateComment } from "../Comment/CreateComment";
 import './ArticleListItem.css'
 import {IComment} from "../../models/Comment";
 import { CommentList } from "../Comment/CommentList";
-import { CommentListItem } from "../Comment/CommentListItem";
 import {IUser} from "../../models/User";
 import "./Article.css"
 

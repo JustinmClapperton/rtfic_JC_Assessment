@@ -34,7 +34,6 @@ class CreateArticle extends React.Component<ICreateArticleProps, ICreateArticleS
             const article = {title: this.state.title, content: this.state.content, author: this.props.author, votes: [], comments: []}
             this.props.handleCreateArticle(article)
         }
-
     }
 
     render() {

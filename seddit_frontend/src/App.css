@@ -18,19 +18,21 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #09d3ac;
     border-radius: 4pt;
     box-sizing: border-box;
+    background-color: floralwhite;
 }
 
 textarea {
     resize: none;
     width: 600px;
     height: 120px;
-    border: 3px solid #cccccc;
+    border: 1px solid #09d3ac;
     padding: 5px;
     background-position: bottom right;
     background-repeat: no-repeat;
     border-radius: 4pt;
     outline: none;
+    background-color: floralwhite;
 }

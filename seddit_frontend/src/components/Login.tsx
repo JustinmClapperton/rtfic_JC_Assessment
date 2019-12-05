@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css"
+import moment from "moment"
 
 interface ILoginProps {
     handleLogin: (username: string) => void
@@ -14,6 +15,7 @@ class Login extends React.Component<ILoginProps, ILoginState>{
     constructor(props: ILoginProps) {
         super(props);
         this.state = { username: "" }
+
     }
 
     private handleUsernameChange = (event: any) => {
@@ -30,6 +32,7 @@ class Login extends React.Component<ILoginProps, ILoginState>{
         if (this.state.username === "") {
             alert("Please enter a valid username")
         } else {
+            document.cookie = "username="+this.state.username+"; expires="+moment().add(7, "days").toISOString()+"; path=/";
             this.props.handleLogin(this.state.username)
         }
     }

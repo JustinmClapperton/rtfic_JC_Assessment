@@ -6,9 +6,12 @@ import {IArticle} from "../models/Article";
 import { Article } from "./Article/Article";
 import "./Home.css"
 
+let mockData = require("../db/data.json")
+
 
 interface IHomeProps {
     user: IUser
+    handleLogout: () => void
 }
 
 interface IHomeState {
@@ -23,7 +26,8 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 
     constructor(props: IHomeProps) {
         super(props);
-        this.state = { isCreatingArticle: false, isViewingArticle: false, articles: []}
+        console.log(mockData)
+        this.state = { isCreatingArticle: false, isViewingArticle: false, articles: mockData}
     }
 
 
@@ -98,6 +102,9 @@ class Home extends React.Component<IHomeProps, IHomeState> {
             return (
                 <div className={"Home"}>
                     <div>
+                        <div className={"LogoutButtonContainer"}><a onClick={this.props.handleLogout} className={"LogoutButton"}>Logout</a></div>
+
+                        <br/>
                         <label>Welcome! {this.props.user.username}</label>
 
                         <button className={"CreateArticleButton"} onClick={this.showCreateArticle}>Create Article</button>
@@ -111,9 +118,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
                 </div>
             );
         }
-
     }
-
 }
 
 export {

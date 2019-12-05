@@ -22,7 +22,7 @@ class CommentList extends React.Component<ICommentListProps, ICommentListState> 
             <div>
                 { this.props.comments.map((comment, idx) => {
                     return (
-                        <div>
+                        <div key={idx}>
                             <CommentListItem commentIdx={idx} comment={comment} user={this.props.user} createComment={this.props.handleCreateComment}/>
                         </div>
                     )

@@ -8,3 +8,15 @@
     margin: 10% auto auto auto;
     padding: 20pt;
 }
+
+.LogoutButtonContainer {
+    text-align: right;
+}
+
+.LogoutButton {
+    font-size: larger;
+}
+
+.LogoutButton:hover {
+    color: dodgerblue;
+}

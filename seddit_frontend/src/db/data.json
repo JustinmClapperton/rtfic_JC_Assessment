@@ -1,0 +1,141 @@
+[
+  {
+    "author": {
+      "username": "User1"
+    },
+    "title": "Article1",
+    "content": "Hello look im some content",
+    "votes": [
+      {
+        "author": {
+          "username": "User1"
+        },
+        "voteType": 1
+      },
+      {
+        "author": {
+          "username": "User1"
+        },
+        "voteType": 0
+      },
+      {
+        "author": {
+          "username": "User2"
+        },
+        "voteType": 0
+      },
+      {
+        "author": {
+          "username": "User2"
+        },
+        "voteType": 0
+      }],
+    "comments": [
+      {
+        "author": {
+          "username": "User1"
+        },
+        "comment": "Look im a comment",
+        "comments": []
+      },
+      {
+        "author": {
+          "username": "User2"
+        },
+        "comment": "Look im a comment2",
+        "comments": [
+          {
+            "author": {
+              "username": "User3"
+            },
+            "comment": "Look im a comment4",
+            "comments": []
+          }]
+      },
+      {
+        "author": {
+          "username": "User3"
+        },
+        "comment": "Look im a comment3",
+        "comments": []
+      }
+    ]
+  },
+  {
+    "author": {
+      "username": "User1"
+    },
+    "title": "Article1",
+    "content": "Hello look im some content",
+    "votes": [],
+    "comments": [
+      {
+        "author": {
+          "username": "User1"
+        },
+        "comment": "Look im a comment",
+        "comments": []
+      },
+      {
+        "author": {
+          "username": "User2"
+        },
+        "comment": "Look im a comment2",
+        "comments": [
+          {
+            "author": {
+              "username": "User3"
+            },
+            "comment": "Look im a comment4",
+            "comments": []
+          }]
+      },
+      {
+        "author": {
+          "username": "User3"
+        },
+        "comment": "Look im a comment3",
+        "comments": []
+      }
+    ]
+  },
+  {
+    "author": {
+      "username": "User1"
+    },
+    "title": "Article1",
+    "content": "Hello look im some content",
+    "votes": [],
+    "comments": [
+      {
+        "author": {
+          "username": "User1"
+        },
+        "comment": "Look im a comment",
+        "comments": []
+      },
+      {
+        "author": {
+          "username": "User2"
+        },
+        "comment": "Look im a comment2",
+        "comments": [
+          {
+            "author": {
+              "username": "User3"
+            },
+            "comment": "Look im a comment4",
+            "comments": []
+          }]
+      },
+      {
+        "author": {
+          "username": "User3"
+        },
+        "comment": "Look im a comment3",
+        "comments": []
+      }
+    ]
+  }
+]
+
