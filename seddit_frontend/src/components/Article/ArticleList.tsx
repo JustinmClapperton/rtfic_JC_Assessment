@@ -1,10 +1,13 @@
 import React from "react";
 import {IArticle} from "../../models/Article";
 import { ArticleListItem } from "./ArticleListItem";
+import "./ArticleList.css"
 
 
 interface IArticleListProps {
     articles: IArticle[]
+    handleArticleUpdate: (article: IArticle, idx: number) => void
+    handleArticleComment: (article: IArticle, idx: number) => void
 }
 
 interface IArticleListState {
@@ -23,8 +26,19 @@ class ArticleList extends React.Component<IArticleListProps, IArticleListState> 
                 )
         } else {
             return (
-                <div>
-                    { this.props.articles.map((article, idx) => {return <div key={idx}><ArticleListItem article={article}/><br/></div>})}
+                <div className={"ArticleList"}>
+                    { this.props.articles.map((article, idx) => {
+                        return (
+                            <div key={idx}>
+                                <ArticleListItem
+                                    article={article}
+                                    idx={idx}
+                                    handleVote={this.props.handleArticleUpdate}
+                                    handleCreateComment={this.props.handleArticleComment}/>
+                                <br/>
+                            </div>
+                        )
+                    })}
                 </div>
             );
         }

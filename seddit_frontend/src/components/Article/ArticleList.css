@@ -1,0 +1,8 @@
+.ArticleList {
+    align-content: center;
+    width: 100%;
+    /*text-align: left;*/
+    display: block;
+    padding: 0;
+    margin-right: 20pt;
+}

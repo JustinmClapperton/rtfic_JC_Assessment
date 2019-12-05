@@ -1,0 +1,10 @@
+.Home {
+    border-radius: 5px;
+    background-color: lightslategray;
+    align-content: center;
+    width: 50%;
+    text-align: left;
+    display: block;
+    margin: 10% auto auto auto;
+    padding: 20pt;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Login.css"
 
 interface ILoginProps {
     handleLogin: (username: string) => void
@@ -32,13 +33,15 @@ class Login extends React.Component<ILoginProps, ILoginState>{
 
     render() {
         return (
-            <div>
+            <div className={"Login"}>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Username:
-                        <input type={"text"} name={"username"} value={this.state.username} onChange={this.handleUsernameChange} />
+                        Username
+                        <br/>
+                        <input className={"LoginUsername"} type={"text"} name={"username"} value={this.state.username} onChange={this.handleUsernameChange} />
                     </label>
-                    <input type="submit" value="Login" />
+                    <br/>
+                    <input className={"LoginButton"} type="submit" value="Login" />
                 </form>
             </div>
         );

@@ -1,6 +1,7 @@
 import {IUser} from "../../models/User";
 import React from "react";
 import {IArticle} from "../../models/Article";
+import "./CreateArticle.css"
 
 interface ICreateArticleProps {
     author: IUser
@@ -27,20 +28,22 @@ class CreateArticle extends React.Component<ICreateArticleProps, ICreateArticleS
     }
 
     private  handlePost = () => {
-        const article = {title: this.state.title, content: this.state.content, author: this.props.author}
+        const article = {title: this.state.title, content: this.state.content, author: this.props.author, votes: [], comments: []}
         this.props.handleCreateArticle(article)
     }
 
     render() {
         return (
-            <div>
+            <div className={"CreateArticle"}>
                 <label>
-                    Title:
-                    <input value={this.state.title} name={"title"} onChange={this.handleInputChange}/>
+                    Title
+                    <br/>
+                    <input className={"CreateArticleTitle"} type={"text"} value={this.state.title} name={"title"} onChange={this.handleInputChange}/>
                 </label>
                 <br/>
                 <label>
-                    Content:
+                    Content
+                    <br/>
                     <textarea value={this.state.content} name={"content"} onChange={this.handleInputChange}/>
                 </label>
                 <br/>

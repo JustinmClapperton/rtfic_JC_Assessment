@@ -1,35 +1,52 @@
 
 
-.ArticleListItem {
+.Article {
     border: 2pt solid #09d3ac;
     box-shadow: 0 4px 8px 0 cadetblue;
     transition: 0.3s;
     border-radius: 5px;
+    padding: 8pt;
+    margin: 0;
     text-align: left;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
+    width: 50%;
 }
 
 .ArticleListItem:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.ArticleListItemContent {
+.ArticleContent {
     font-size: smaller;
     padding-top: 8pt;
     padding-bottom: 8pt;
     overflow-wrap: break-word;
 }
 
-.ArticleListItemTitle {
+.ArticleTitle {
     font-size: large;
     font-weight: bold;
 }
 
-.ArticleListItemAuthor {
+.ArticleAuthor {
     font-size: x-small;
     font-weight: lighter;
+}
+
+.Article {
+    border-radius: 5px;
+    background-color: lightslategray;
+    align-content: center;
+    width: 50%;
+    text-align: left;
+    display: block;
+    margin: 10% auto 20% auto;
+    padding: 20pt;
+}
+
+.BackButton {
+    font-size: larger;
+
+}
+.BackButton:hover {
+    color: dodgerblue;
 }

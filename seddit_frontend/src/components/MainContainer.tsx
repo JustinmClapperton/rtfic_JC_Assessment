@@ -2,6 +2,7 @@ import React from "react";
 import { Login } from "./Login";
 import { Home } from "./Home";
 import { IUser } from "../models/User";
+import "./MainContainer.css"
 
 interface IMainContainerProps {
 
@@ -36,7 +37,7 @@ class MainContainer extends React.Component<IMainContainerProps, IMainContainerS
             );
         } else {
             return (
-                <div>
+                <div className={"MainContainer"}>
                     <Login handleLogin={this.handleLogin}/>
                 </div>
             );
