@@ -12,6 +12,9 @@ Thanks
 
 ## How to run
 
+`node version 13.2.0`
+If you dont have yarn please install first `npm install -g yarn`
+
 1. `cd seddit_frontend`
 2. `yarn install`
 3. `yarn start`
