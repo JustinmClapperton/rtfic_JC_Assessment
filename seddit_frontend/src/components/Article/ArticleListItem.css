@@ -33,3 +33,14 @@
     font-size: x-small;
     font-weight: lighter;
 }
+
+.ArticleListItemButton {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 8pt;
+}
+
+.ArticleListItemButtonContainer {
+    width: 100%;
+    text-align: left;
+}

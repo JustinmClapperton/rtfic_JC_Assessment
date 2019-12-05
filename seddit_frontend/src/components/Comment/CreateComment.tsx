@@ -27,12 +27,17 @@ class CreateComment extends React.Component<ICreateCommentProps, ICreateCommentS
             content: event.target.value
         })
     }
+
     private createComment = () => {
-        let comment: IComment = {comment: this.state.content, author: this.props.author, comments: []}
-        this.props.createComment(comment)
-        this.setState({
-            content: ""
-        })
+        if (this.state.content === "") {
+            alert("Please add some content")
+        } else {
+            let comment: IComment = {comment: this.state.content, author: this.props.author, comments: []}
+            this.props.createComment(comment)
+            this.setState({
+                content: ""
+            })
+        }
     }
 
     render() {

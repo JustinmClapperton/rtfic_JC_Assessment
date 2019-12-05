@@ -50,3 +50,14 @@
 .BackButton:hover {
     color: dodgerblue;
 }
+
+.ArticleButton {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 8pt;
+}
+
+.ArticleButtonContainer {
+    width: 100%;
+    text-align: left;
+}

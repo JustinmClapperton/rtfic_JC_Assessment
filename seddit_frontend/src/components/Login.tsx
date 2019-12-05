@@ -27,7 +27,11 @@ class Login extends React.Component<ILoginProps, ILoginState>{
 
     private handleSubmit = (event: any) => {
         event.preventDefault();
-        this.props.handleLogin(this.state.username)
+        if (this.state.username === "") {
+            alert("Please enter a valid username")
+        } else {
+            this.props.handleLogin(this.state.username)
+        }
     }
 
 

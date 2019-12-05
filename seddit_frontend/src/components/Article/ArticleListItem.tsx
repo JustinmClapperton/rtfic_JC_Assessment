@@ -45,9 +45,12 @@ class ArticleListItem extends React.Component<IArticleListItemProps, IArticleLis
                 Down Votes: {`${this.props.article.votes.filter( vote => vote.voteType === VoteType.down).length} `}
                 Comments: {this.props.article.comments.length}
                 <br/>
-                <button name={"upVote"} onClick={this.handleVote}>Up Vote</button>
-                <button name={"downVote"} onClick={this.handleVote}>Down Vote</button>
-                <button name={"createComment"} onClick={this.handleComment}>Comment</button>
+                <div className={"ArticleListItemButtonContainer"}>
+                    <button name={"upVote"} className={"ArticleListItemButton"} onClick={this.handleVote}>Up Vote</button>
+                    <button name={"downVote"} className={"ArticleListItemButton"} onClick={this.handleVote}>Down Vote</button>
+                    <button name={"createComment"} className={"ArticleListItemButton"} onClick={this.handleComment}>Comment</button>
+                </div>
+
             </div>
         );
     }

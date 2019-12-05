@@ -28,8 +28,13 @@ class CreateArticle extends React.Component<ICreateArticleProps, ICreateArticleS
     }
 
     private  handlePost = () => {
-        const article = {title: this.state.title, content: this.state.content, author: this.props.author, votes: [], comments: []}
-        this.props.handleCreateArticle(article)
+        if (this.state.content === "" || this.state.title === "") {
+            alert("Please add a title and some content")
+        } else {
+            const article = {title: this.state.title, content: this.state.content, author: this.props.author, votes: [], comments: []}
+            this.props.handleCreateArticle(article)
+        }
+
     }
 
     render() {

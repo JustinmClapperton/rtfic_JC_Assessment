@@ -61,10 +61,10 @@ class Article extends React.Component<IArticleProps, IArticleState> {
                 Down Votes: {`${this.props.article.votes.filter( vote => vote.voteType === VoteType.down).length} `}
                 Comments: {this.props.article.comments.length}
                 <br/>
-                <button name={"upVote"} onClick={this.handleVote}>Up Vote</button>
-                <button name={"downVote"} onClick={this.handleVote}>Down Vote</button>
-                <br/>
-                <br/>
+                <div className={"ArticleButtonContainer"}>
+                    <button className={"ArticleButton"} name={"upVote"} onClick={this.handleVote}>Up Vote</button>
+                    <button className={"ArticleButton"} name={"downVote"} onClick={this.handleVote}>Down Vote</button>
+                </div>
                 <br/>
                 <CreateComment isReply={false} parent={this.props.article} author={this.props.article.author} createComment={this.handleCreateComment}/>
                 { this.props.article.comments.length === 0 && <label>No Comments</label>}
